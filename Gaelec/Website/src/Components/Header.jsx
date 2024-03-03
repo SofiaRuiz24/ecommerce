@@ -1,11 +1,11 @@
 import { Nav } from './nav.jsx'
-import callCenter from './../assets/callCenter.jpg'
-import ubicacion from './../assets/ubicacion.jpg'
-import camion from './../assets/camionEnvio.jpg'
+import callCenter from './../assets/callcenter.png'
+import ubicacion from './../assets/ubicacion.png'
+import camion from './../assets/camionEnvio.webp'
 
 export function Header () {
   return (
-    <>
+    <header>
       <div id='encabezado'>
         <div className='informacion-nav'>
           <img src={callCenter} alt='Icono de llamada' />
@@ -23,6 +23,6 @@ export function Header () {
         </div>
       </div>
       <Nav />
-    </>
+    </header>
   )
 }

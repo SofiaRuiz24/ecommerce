@@ -29,7 +29,7 @@
 
 /*----------- HEADER -----------*/
 
-header{
+Header{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -51,7 +51,7 @@ header{
 .informacion-secundaria{
     display: flex;
 }
-nav{
+Nav{
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
@@ -110,4 +110,505 @@ nav{
 .informacion2 a:link,.informacion2 a:visited,.informacion2 a:active {
     text-decoration:none;
     color: var(--text-white);
+}
+#iconMenu{
+    display: none;
+}
+#toggle-menu{
+    display: none;
+}
+#menu{
+    display: flex;
+    background-color: var(--bg-white);
+    text-align: center;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 10rem;
+}
+
+#menu li a{
+    width: 15%;
+    height: 2rem;
+    color: var(--background);
+    font-weight: 600;
+}
+#menu li:last-child{
+    background-color: var(--bg-lightblue);
+    position: absolute;
+    right: 0;
+    width: 20%;
+}
+/*----------- MAIN INDEX-----------*/
+.main-body{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding-top: 2rem;
+    align-items: center;
+}
+#portada{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#portada img{
+    max-width: 60rem;
+
+}
+
+#categorias{
+    height:8rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+}
+.cardCateg{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: solid;
+    border-radius: 10px;
+    border-color: #8c9197;
+    padding: 1rem;
+    width: 23%;
+    border-width: 1.5px;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+}
+.cardCateg img{
+    height: 7rem;
+}
+
+.productosRiel{
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+#rielProd{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4rem;
+}
+
+.cardProduct{
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    border-radius: 10px;
+    border-color: #8c9197;
+    padding: 1rem;
+    border-width: 1.5px;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 19px;
+    width: 15rem;
+    height: 18rem;
+}
+.cardProduct img{
+    height: 6.5rem;
+    max-width: 7rem;
+}
+.cardProduct button{
+    background-color: var(--bg-lightblue);
+    border-style: hidden;
+    padding: 0.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+#beneficios{
+    display: flex;
+    width: 80%;
+    background-color: var(--bg-babyblue);
+    border-radius: 20px;
+    justify-content: space-around;
+    padding: 2.5rem 0;
+}
+.cardBeneficio{
+    color: var(--secondary);
+    text-align: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.cardBeneficio img{
+    height: 4rem;
+}
+/*----------- FOOTER -----------*/
+.footer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    align-items: center;
+    color: var(--secondary);
+}
+.footer-section{
+    background-color: var(--bg-white);
+}
+.help-card{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+#contacto{
+    display: flex;
+    background-color: var(--bg-lightblue);
+    padding: 1rem 1rem;
+    margin: 1rem;
+    border-radius: 20px;
+    border-style: dashed;
+    border-color: #003F62;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+}
+#contacto .informacion{
+    padding: 0;
+}
+#correo{
+    display: flex;
+    background-color: var(--bg-white);
+    width: 40%;
+    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+}
+#correo img{
+    height: 4rem;
+}
+.footer-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 18rem;
+    align-items: center;
+    color: #050d26;
+}
+#redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: small;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+#redes img{
+    height: 7rem;
+   
+}
+#imgRedes{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+#imgRedes img{
+    height: 2rem;
+    width: 2rem;
+}
+#ayuda{
+    padding-left: 2.5rem;
+    list-style-type: circle;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+/*----------- Inicio de Sesión -----------*/
+#logoInicio{
+    height: 6rem;
+    
+}
+.inicioSesion{
+    background: rgb(0,63,98);
+    background: linear-gradient(49deg, rgba(0,63,98,1) 26%, rgba(74,121,147,1) 59%, rgba(5,17,53,1) 91%);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.center{
+    width: 50%;
+    background-color: var(--bg-white);
+    border-radius: 20px;
+}
+.center h1{
+    text-align: center;
+    padding-top: 1rem;
+    border-bottom: 1px solid silver;
+}
+.center form{
+    padding: 0 3rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 2rem;
+}
+
+form .campoTexto {
+    position: relative;
+    border-bottom: 2px solid var(--text-gray) ;
+    width: 100%;
+}
+
+.campoTexto input{
+    width: 100%;
+    padding: 0 0.5rem;
+    height: 2.5rem;
+    font-size: 16px;
+    background: none;
+    border-style: hidden;
+}
+
+.pass{
+    color: var(--text-darkgray);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pass:hover{
+    text-decoration: underline;
+}
+
+.bttn{
+    height: 3rem;
+    border-radius: 20px;
+    background-color: var(--secondary);
+    border: 1px solid;
+    color: var(--text-white);
+    font-weight: bold;
+    font-size: 19px;
+    cursor: pointer;
+}
+.bttn:hover{
+    border-color: var(--primary);
+}
+.registrarse{
+    padding-bottom: 1.3rem ;
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-darkgray);   
+    align-items: center;
+    padding-left: 2rem;
+    text-align: center;
+}
+.registrarse a:link,.registrarse a:visited,.registrarse a:active {
+    text-decoration:none;
+    color: var(--text-darkgray);
+    font-weight: bold;
+    background-color: var(--bg-babyblue);
+    padding: 0.5rem;
+    border-radius: 20px;
+
+}
+.registrarse a:hover{
+    color: var(--secondary);
+}
+
+@media(max-width: 880px) {
+    
+    Nav{
+        flex-direction: row;
+        align-items: center;
+        height: 4rem;
+        width: 100%;
+        justify-content: space-between;
+        padding-right: 2rem;
+    }
+    .infoSecundaria{
+        display: none;
+    }
+    #navbar{
+        width: 80%;
+    }
+    #buscador{
+        display: none;
+    }
+    #iconMenu{
+        display: block;
+        height: 2.5rem;
+    }
+    #menu{
+        flex-direction: column;
+        position: absolute;
+        top: 7rem;
+        width: 100%;
+        height: 40vh;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        display: none; 
+        padding-right: 0;
+    }
+    #menu ul{
+       padding: 0;
+    }
+    #menu li{
+        width: 100vw;
+    }
+    #menu p{
+        display: none;
+    }
+    #menu li:last-child{
+        position: static;
+        background-color: var(--bg-white);
+    }
+    #toggle-menu:checked ~ #menu {
+        display: flex;
+    }
+
+    /*----------- MAIN INDEX-----------*/
+    #portada{
+        max-width: 90vw;
+    }
+    #portada img{
+        height: 35vw;
+    }
+    #categorias{
+        display: none;
+    }
+
+    #callToAction{
+        height: 18rem;
+    }
+    #callToAction button{
+        display: none;
+        height: 4rem;
+        width: 7rem;
+        bottom: 15%;
+        right: 10%;
+    }
+    #beneficios {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        gap: 3rem;
+    }
+    /*----------- FOOTER -----------*/
+    .footer{
+        gap: 6rem;
+        
+    }
+    .footer-section{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+    #contacto{
+        text-align: center;
+        flex-wrap: wrap;
+        height: 10rem;
+    }
+    #ayuda, .footer-section h4{
+        display: none;
+    }
+    
+    /*----------- Inicio de Sesión -----------*/
+    .center{
+        width: 60vw;
+    }
+    .registrarse{
+        padding-left: 1rem;
+    }
+}
+
+@media(max-width: 420px){
+   
+    /*----------- HEADER -----------*/
+    Nav{
+        
+        gap: 0;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+    }
+    #encabezado{
+        
+        padding-left: 2rem;
+    }
+    #shopCart{
+        display: none;
+    }
+    #navbar{
+        justify-content: space-evenly;
+        position: absolute;
+        left: 0;
+    }
+    #iconMenu{
+        position: absolute;
+        right: 5vw;
+        bottom: 10%;
+    }
+    .logo{
+        padding: 0.3rem;
+    }
+    #menu li:last-child a{
+        position: relative;
+    }
+    /*----------- MAIN INDEX-----------*/
+   
+    
+    #callToAction button{
+        height: 4rem;
+        width: 100%;
+        bottom: 0%;
+        right: 0%;
+        border-radius: 0;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    #callToAction{
+        height: 14rem;
+        width: 22rem;
+    }
+    #beneficios {
+        width: 90%;
+    }
+    /*----------- FOOTER -----------*/
+    .footer{
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        
+    }
+    #contacto{
+        flex-direction: column;
+        height: 50vh;
+        justify-content: space-evenly;
+        padding: 0 1rem;
+        margin: 0;
+    }
+    #contacto .informacion img {
+        display: none;
+    }
+    #correo{
+        width: 97%;
+    }
+    /*----------- Inicio de Sesión -----------*/
+    .center{
+        width: 90%;
+    }
+    .registrarse{
+        padding-left: 0;
+    }
 }

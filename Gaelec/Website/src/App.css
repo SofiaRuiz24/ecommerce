@@ -1,0 +1,113 @@
+:root{
+    /*Backgrounds colors*/
+    --background: #02050e;
+    --primary: #1e50ff;
+    --secondary: #003F62;
+    --btn-bg: #051135;
+    --bg-azul: #e9eeff;
+    --bg-white: #e4dede;
+    --bg-lightblue: #5B95B5;
+    --bg-babyblue: #9cc9e2d8;
+    --bg-nav: #0f1525;
+
+    /* Text colors */
+    --text-white: #ffffff;
+    --text-grayWhite: #adb9c7;
+    --text-gray: #8c9197;
+    --text-darkgray: #5a5e63;
+}
+/*----------- RESET -----------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+    text-decoration: none;
+    /*list-style-type: none;*/
+}
+
+/*----------- HEADER -----------*/
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
+    
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+#encabezado{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 3rem;
+    background: var(--bg-white);
+}
+.informacion-secundaria{
+    display: flex;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    background: var(--secondary);
+    width: 100%;
+    justify-items:center;
+}
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+    
+}
+.logo{
+    max-width: 9rem;
+}
+#buscador{
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    background-color: var(--bg-white);
+    height: 3rem;
+    border-radius: 10px;
+    gap: 2rem;
+    padding-left: 1rem;
+}
+
+#buscador button{
+    background-color: var(--bg-lightblue);
+    border: hidden;
+    padding: 0.5rem;
+    border-radius: 10px;
+    height: 3rem;
+    width: 5rem;
+    font-weight: bold;
+    font-size: medium;
+}
+.informacion, .informacion2, .informacion-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    font-size: sm;
+}
+.informacion2{
+    color: var(--text-white);
+}
+.informacion img, .informacion2 img, .informacion-nav img{
+    max-width: 2.5rem;
+    max-height: 2rem;
+}
+.informacion2 a:link,.informacion2 a:visited,.informacion2 a:active {
+    text-decoration:none;
+    color: var(--text-white);
+}

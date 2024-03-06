@@ -1,0 +1,56 @@
+{ "Products":[
+    {
+        "_id": 1,
+        "name": "Lampara Led 9w Luz Fria",
+        "tipo": "Iluminacion interior",
+        "stock": true,
+        "precio": 1200,
+        "imagen": "LamparaDia.png",
+        "description": "Lampara Led de 9w luz fria/blanca, marca Candela equivalente a 75w de las Lamparas Halogenas."
+    },
+    {
+        "_id": 2,
+        "name": "Reflector de 30w",
+        "tipo": "Iluminacion exterior",
+        "stock": true,
+        "precio": 4600,
+        "imagen": "Reflec30.png",
+        "description": "Reflector Led de 30w luz fria/blanca, marca Candela equivalente a 250w de los reflectores halogenos."
+    },
+    {
+        "_id": 3,
+        "name": "Panel Redondo Aplicar 6w",
+        "tipo": "Iluminacion interior",
+        "stock": true,
+        "precio": 3200,
+        "imagen": "Panel6w.png",
+        "description": "Panel Led de 6w redondo de aplicar en luz fria/blanca, marca Candela equivalente a 40w de luz halogena."
+    },
+    {
+        "_id": 4,
+        "name": "Guirnalda 10mts",
+        "tipo": "Iluminacion exterior",
+        "stock": true,
+        "precio": 7000,
+        "imagen": "guirnalda10.png",
+        "description": "Guirnalda de elaboracion propia, con 10mts de largo y 10 portalamparas cada 100cm. Cuenta con Ficha macho en un extremo y la punta sellada en el opuesto. Es apta para Lamapara halogenas y leds."
+    },
+    {
+        "_id": 5,
+        "name": "Lampara Hi Power 40w",
+        "tipo": "Iluminacion interior",
+        "stock": true,
+        "precio": 6900,
+        "imagen": "Hipower40.png",
+        "description": "Lampara Led Galponera de 40w luz fria/blanca, marca Candela equivalente a 350 de las lamparas halogenas."
+    },
+    {
+        "_id": 6,
+        "name": "Cable Unipolar 1.5mm Normalizado",
+        "tipo": "Cables",
+        "stock": true,
+        "precio": 26000,
+        "imagen": "Cableunipolar.png",
+        "description": "Lampara Led Galponera de 40w luz fria/blanca, marca Candela equivalente a 350 de las lamparas halogenas."
+    }
+]}

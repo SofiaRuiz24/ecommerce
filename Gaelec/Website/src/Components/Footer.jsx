@@ -6,11 +6,11 @@ import logoFacebook from './../assets/logoFacebook.png'
 
 export function Footer () {
   return (
-    <footer>
+    <footer className='footer'>
       <div id='contacto'>
         <h3>Recibe nuestro catalogo</h3>
         <div id='correo'>
-          <h4>Correo electrónico</h4>
+          <h4>Numero de Whatsapp...</h4>
           <img src={correo} alt='Icono de enviar' />
         </div>
         <div className='informacion'>
@@ -29,7 +29,7 @@ export function Footer () {
             <a href='https://facebook.com/GaelecMaterialeselectricos' target='_blank' rel='noreferrer'>
               <img src={logoFacebook} alt='Icono de Facebook' />
             </a>
-            <a href='https://wa.me/message/WNA2DAIUBEXOG1' target='_blank' rel='noreferrer'>
+            <a href=' https://wa.me/5492616901475 ' target='_blank' rel='noreferrer'>
               <img src={callcenter} alt='Icono de WhatsApp' />
             </a>
           </div>

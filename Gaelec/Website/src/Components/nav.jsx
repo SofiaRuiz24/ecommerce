@@ -1,38 +1,65 @@
-// import { useState } from 'react'
+import { useRef } from 'react'
 import logoGaelec from './../assets/LogoGaelec.png'
-import user from './../assets/circle-user-solid.svg'
-import carrito from './../assets/carrito.png'
+import tienda from './../assets/tienda.png'
+import { Cart } from './Cart'
+
 // import menuHamb from './../assets/bars-solid.svg'
 
-export function Nav () {
+export function Nav ({ search, eshop, changeFilters, products, orderProductsSeter }) {
   // const [hamburgerMenu, setHamburgerMenu] = useState(false)
+  const inputRefBuscar = useRef()
+  const handleBuscar = (event) => {
+    event.preventDefault()
+    const value = inputRefBuscar.current.value
+    console.log(value)
+    if (value === '') {
+      window.alert('No se ingreso ningun producto en la busqueda')
+      return
+    }
+    if (value.match(/^\d+$/)) {
+      window.alert('No se puede buscar un producto con solo números')
+      // eslint-disable-next-line no-useless-return
+      return
+    }
+    if (value.length < 3) {
+      window.alert('La busqueda debe al menos tener 3 caracteres')
+      // eslint-disable-next-line no-useless-return
+      return
+    }
+    search(value)
+    eshop(true)
+    window.scrollTo(0, 0)
+  }
+  const handleClickProducts = () => {
+    eshop(true)
+    window.scrollTo(0, 0)
+  }
+  const handleClickInicio = () => {
+    eshop(false)
+    window.scrollTo(0, 0)
+    changeFilters(prevState => ({
+      ...prevState,
+      categoria: 'all',
+      minPrice: 0
+    }))
+  }
 
   return (
     <nav>
       <div id='navbar'>
-        <img className='logo' src={logoGaelec} alt='Logo Gaelec Materiales Eléctricos' />
-        <div id='buscador'>
-          <p>Búsqueda de productos...</p>
-          <button>Buscar</button>
-        </div>
+        <a onClick={handleClickInicio}><img className='logo' src={logoGaelec} alt='Logo Gaelec Materiales Eléctricos' /></a>
+        <form id='buscador' onSubmit={handleBuscar}>
+          <input required ref={inputRefBuscar} placeholder='Búsqueda de productos...' />
+          <button type='submit'>Buscar</button>
+        </form>
         <div className='informacion2'>
-          <img src={user} alt='Icono perfil' />
-          <a href='./Assets/pages/login.html'><p><b>Ingresar</b></p></a>
+          <a className='link-nav-productos' onClick={handleClickProducts}><b>Productos</b><img src={tienda} alt='Icono de fachada de tienda' /></a>
+
         </div>
         <div className='informacion2' id='shopCart'>
-          <img src={carrito} alt='Carrito de compras' />
-          <p><b>Carro de Compras</b></p>
+          <Cart cart={products} orderProductsSeter={orderProductsSeter} />
         </div>
       </div>
-      {/* <button onClick={setHamburgerMenu(!hamburgerMenu)}><img src={menuHamb} alt='Icono Menu' id='iconMenu' /></button>
-       hamburgerMenu &&
-        <ul id='menu'>
-          <li><a href='index.html' className='btnesMenu'>Inicio</a></li>
-          <li><a href='#callToAction'>Nosotros</a></li>
-          <li><a href='#contacto'>Contacto</a></li>
-          <p>Envíos a todo el país</p>
-          <li><a href='#categorias'>Productos</a></li>
-  </ul> */}
     </nav>
   )
 }

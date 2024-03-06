@@ -7,6 +7,7 @@
     --bg-azul: #e9eeff;
     --bg-white: #e4dede;
     --bg-lightblue: #5B95B5;
+    --bg-grayblue: #a6bac4;
     --bg-babyblue: #9cc9e2d8;
     --bg-nav: #0f1525;
 
@@ -61,10 +62,10 @@ Nav{
 }
 #navbar{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 4rem;
-    
+    width: 100%;
 }
 .logo{
     max-width: 9rem;
@@ -74,13 +75,22 @@ Nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 40%;
+    width: 40vw;
     background-color: var(--bg-white);
     height: 3rem;
     border-radius: 10px;
     gap: 2rem;
     padding-left: 1rem;
 }
+
+#buscador input{
+    border-style: hidden;
+    background-color: var(--bg-white);
+}
+
+#buscador input:focus {
+    outline: none;
+  }
 
 #buscador button{
     background-color: var(--bg-lightblue);
@@ -103,7 +113,13 @@ Nav{
 .informacion2{
     color: var(--text-white);
 }
-.informacion img, .informacion2 img, .informacion-nav img{
+.informacion2 a{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.informacion img, .informacion2 a img, .informacion-nav img{
     max-width: 2.5rem;
     max-height: 2rem;
 }
@@ -152,7 +168,7 @@ Nav{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-top: 4rem;
 }
 #portada img{
     max-width: 60rem;
@@ -186,7 +202,7 @@ Nav{
 }
 
 .productosRiel{
-    height: 20%;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -216,6 +232,9 @@ Nav{
     width: 15rem;
     height: 18rem;
 }
+.cardProduct:hover{
+    scale: 1.1;
+}
 .cardProduct img{
     height: 6.5rem;
     max-width: 7rem;
@@ -227,7 +246,42 @@ Nav{
     border-radius: 20px;
     font-weight: bold;
 }
-
+.cardProduct button:hover{
+    cursor: pointer;
+    font-size: bold;
+    border: 2px solid #051135;
+}
+.cardProduct button:active{
+    color: var(--bg-white);
+}
+.link-nav-productos:hover{
+    cursor: pointer;
+    font-size: bold;
+}
+.link-productos{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    text-align: center;
+}
+.link-productos:hover{
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.link-productos:active{
+    color: #1e3d9b;
+}
+.link-inicio:hover{
+    cursor: pointer;
+    font-size: 14px;
+}
+.link-categoria:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
 #beneficios{
     display: flex;
     width: 80%;
@@ -434,14 +488,12 @@ form .campoTexto {
         width: 100%;
         justify-content: space-between;
         padding-right: 2rem;
+        flex-wrap: wrap;
     }
     .infoSecundaria{
         display: none;
     }
-    #navbar{
-        width: 80%;
-    }
-    #buscador{
+    .informacion2 a b{
         display: none;
     }
     #iconMenu{
@@ -506,10 +558,6 @@ form .campoTexto {
         gap: 3rem;
     }
     /*----------- FOOTER -----------*/
-    .footer{
-        gap: 6rem;
-        
-    }
     .footer-section{
         display: flex;
         flex-direction: column-reverse;
@@ -532,83 +580,94 @@ form .campoTexto {
         padding-left: 1rem;
     }
 }
-
-@media(max-width: 420px){
-   
+@media(max-width: 650px){
     /*----------- HEADER -----------*/
-    Nav{
-        
-        gap: 0;
-        justify-content: center;
-        padding: 0;
-        width: 100%;
-    }
-    #encabezado{
-        
-        padding-left: 2rem;
-    }
-    #shopCart{
-        display: none;
-    }
-    #navbar{
-        justify-content: space-evenly;
-        position: absolute;
-        left: 0;
-    }
-    #iconMenu{
-        position: absolute;
-        right: 5vw;
-        bottom: 10%;
-    }
-    .logo{
-        padding: 0.3rem;
-    }
-    #menu li:last-child a{
-        position: relative;
-    }
-    /*----------- MAIN INDEX-----------*/
+#buscador{
+    display: none;
+}
+#navbar{
+    justify-content: center;
+    gap: 3.5rem;
+}
+.informacion-secundaria{
+    display: none;
+}
+
+    @media(max-width: 420px){
    
-    
-    #callToAction button{
-        height: 4rem;
-        width: 100%;
-        bottom: 0%;
-        right: 0%;
-        border-radius: 0;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-    }
-    #callToAction{
-        height: 14rem;
-        width: 22rem;
-    }
-    #beneficios {
-        width: 90%;
-    }
-    /*----------- FOOTER -----------*/
-    .footer{
-        gap: 1.5rem;
-        margin-bottom: 2rem;
+        /*----------- HEADER -----------*/
+        Nav{
+            justify-content: center;
+            padding: 0;
+            width: 100%;
+            gap: 0;
+            
+        }
+        #encabezado{
+            
+            padding-left: 2rem;
+        }
+        #navbar{
+            justify-content: space-e;
+            position: absolute;
+            left: 0;
+            gap: 0;
+        }
+        #iconMenu{
+            position: absolute;
+            right: 5vw;
+            bottom: 10%;
+        }
+        .logo{
+            padding: 0.3rem;
+        }
+        #menu li:last-child a{
+            position: relative;
+        }
+        /*----------- MAIN INDEX-----------*/
+       
         
-    }
-    #contacto{
-        flex-direction: column;
-        height: 50vh;
-        justify-content: space-evenly;
-        padding: 0 1rem;
-        margin: 0;
-    }
-    #contacto .informacion img {
-        display: none;
-    }
-    #correo{
-        width: 97%;
-    }
-    /*----------- Inicio de Sesión -----------*/
-    .center{
-        width: 90%;
-    }
-    .registrarse{
-        padding-left: 0;
+        #callToAction button{
+            height: 4rem;
+            width: 100%;
+            bottom: 0%;
+            right: 0%;
+            border-radius: 0;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        #callToAction{
+            height: 14rem;
+            width: 22rem;
+        }
+        #beneficios {
+            width: 90%;
+        }
+        /*----------- FOOTER -----------*/
+        .footer{
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            
+        }
+        #contacto{
+            flex-direction: column;
+            height: 50vh;
+            justify-content: space-evenly;
+            padding: 0 1rem;
+            margin: 0;
+        }
+        #contacto .informacion img {
+            display: none;
+        }
+        #correo{
+            width: 97%;
+        }
+        /*----------- Inicio de Sesión -----------*/
+        .center{
+            width: 90%;
+        }
+        .registrarse{
+            padding-left: 0;
+        }
     }
 }

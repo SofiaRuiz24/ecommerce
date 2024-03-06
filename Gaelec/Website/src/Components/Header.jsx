@@ -3,7 +3,7 @@ import callCenter from './../assets/callcenter.png'
 import ubicacion from './../assets/ubicacion.png'
 import camion from './../assets/camionEnvio.webp'
 
-export function Header () {
+export function Header ({ search, eshop, changeFilters, products, orderProductsSeter }) {
   return (
     <header>
       <div id='encabezado'>
@@ -22,7 +22,7 @@ export function Header () {
           </a>
         </div>
       </div>
-      <Nav />
+      <Nav search={search} eshop={eshop} changeFilters={changeFilters} products={products} orderProductsSeter={orderProductsSeter} />
     </header>
   )
 }
